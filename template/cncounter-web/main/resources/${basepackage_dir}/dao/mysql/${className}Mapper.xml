@@ -98,4 +98,34 @@
 		</trim>
 	</insert>
 	
+		<!-- Operate by criteria -->
+	
+	<select id="listByCriteria" parameterType="com.dshamc.joinlend.business.query.AssetPoolBaseQuery$FindQuery" resultMap="EntityResultMap">
+		SELECT 
+			<include refid="columns"></include>
+		<include refid="getByCriteriaSql" />
+	</select>
+	
+	<select id="singleByCriteria" parameterType="com.dshamc.joinlend.business.query.AssetPoolBaseQuery$FindQuery" resultMap="EntityResultMap">
+		SELECT 
+			<include refid="columns"></include>
+		<include refid="getByCriteriaSql" />
+	</select>
+	
+	<select id="countByCriteria" parameterType="com.dshamc.joinlend.business.query.AssetPoolBaseQuery$FindQuery" resultType="Long">
+		SELECT count(1)
+		<include refid="getByCriteriaSql" />
+	</select>
+	
+	<update id="updateByCriteria" parameterType="com.dshamc.joinlend.business.query.AssetPoolBaseQuery$UpdateQuery">
+		UPDATE t_asset_pool_base RES
+		<include refid="Commons.updateDataCaluseSql"/>
+		<include refid="Commons.updateQuerySql"/>
+	</update>
+
+	<sql id="getByCriteriaSql">
+		FROM t_asset_pool_base RES
+		<include refid="Commons.querySql"/>
+	</sql>
+	
 </mapper>
