@@ -35,7 +35,7 @@ public class ${className}LogicService {
      * 保存${table.tableAlias}对象到数据库
      * @param entity ${table.tableAlias}对象
      */
-    void add(${className} entity){
+    public void add(${className} entity){
         ${classNameLower}Dao.add(entity);
     }
     
@@ -45,7 +45,7 @@ public class ${className}LogicService {
      * @param entity ${table.tableAlias}对象
      * @return 更新记录数
      */
-    int update(${className} entity){
+    public int update(${className} entity){
         return ${classNameLower}Dao.update(entity);
     }
     
@@ -53,7 +53,7 @@ public class ${className}LogicService {
      * 设置${table.tableAlias}对象状态“无效”
      * @param id 主键ID
      */
-    void disable(Integer id){
+    public void disable(Integer id){
         ${classNameLower}Dao.disable(id);;
     }
 }
