@@ -19,8 +19,8 @@ public class GeneratorTest {
 	public void test() throws Exception {
 		GeneratorFacade g = new GeneratorFacade();
 
-//		g.deleteOutRootDir(); // 删除生成器的输出目录
-		g.generateByTable("t_clear_payee_water", "template"); // 通过数据库表生成文件,template为模板的根目录
+		g.deleteOutRootDir(); // 删除生成器的输出目录
+		g.generateByTable("t_clear_resource", "template"); // 通过数据库表生成文件,template为模板的根目录
 
 	}
 }

@@ -19,7 +19,7 @@
 	<entry key="outRoot">generated-sources</entry>
 
 	<!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,示例值: t_,v_ -->
-	<entry key="tableRemovePrefixes">T_CLEAR</entry>
+	<entry key="tableRemovePrefixes">T_</entry>
 
 	<!-- 需要移除的列名前缀,逗号分隔,示例: S_,I_ -->
 	<entry key="rowRemovePrefixes">F</entry>
